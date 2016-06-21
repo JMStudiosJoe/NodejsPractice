@@ -3,10 +3,16 @@
 
 
 //http://blog.geraldpereira.com/rest/crud/2015/09/10/nodejs-express-typescript.html
+//https://basarat.gitbooks.io/typescript/content/docs/quick/browser.html
+//http://blog.charto.net/node-js/Publishing-TypeScript-based-modules-on-npm/
 
 import * as express from 'express';
 const app = express();
 import * as bodyParser from 'body-parser';
+import {GatherEndpoints} from "./gatherEndpoints";
+
+var gather = new GatherEndpoints();
+gather.sayHi();
 
 // configure our app to use bodyParser(it let us get the json data from a POST)
 app.use(bodyParser.urlencoded({extended: true}));
