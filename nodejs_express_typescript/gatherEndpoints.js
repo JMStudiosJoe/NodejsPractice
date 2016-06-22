@@ -1,10 +1,12 @@
 "use strict";
+var express = require('express');
+var router = express.Router();
 var GatherEndpoints = (function () {
-    function GatherEndpoints() {
+    function GatherEndpoints(router) {
+        router.get("/hello", function (req, res) {
+            res.json({ success: "hell ya" });
+        });
     }
-    GatherEndpoints.prototype.sayHi = function () {
-        console.log("hi");
-    };
     return GatherEndpoints;
 }());
 exports.GatherEndpoints = GatherEndpoints;

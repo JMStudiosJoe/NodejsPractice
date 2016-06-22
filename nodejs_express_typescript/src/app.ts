@@ -1,5 +1,3 @@
-/// <reference path="typings/globals/express/index.d.ts" />
-/// <reference path="typings/globals/body-parser/index.d.ts" />
 
 
 //http://blog.geraldpereira.com/rest/crud/2015/09/10/nodejs-express-typescript.html
@@ -9,17 +7,20 @@
 import * as express from 'express';
 const app = express();
 import * as bodyParser from 'body-parser';
-import {GatherEndpoints} from "./gatherEndpoints";
+import {GatherEndpoints} from "../gatherEndpoints";
 
-var gather = new GatherEndpoints();
-gather.sayHi();
+
 
 // configure our app to use bodyParser(it let us get the json data from a POST)
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+
+
 const port:number = 8080;
 const router = express.Router();
+
+var firstEndpoint = new GatherEndpoints(router);
 
 // test route
 router.get('/', function (req, res) {

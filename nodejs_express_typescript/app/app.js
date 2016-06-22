@@ -7,7 +7,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var gatherEndpoints_1 = require("./gatherEndpoints");
+var gatherEndpoints_1 = require("./../gatherEndpoints");
 var gather = new gatherEndpoints_1.GatherEndpoints();
 gather.sayHi();
 // configure our app to use bodyParser(it let us get the json data from a POST)
