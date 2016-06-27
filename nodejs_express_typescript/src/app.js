@@ -14,7 +14,8 @@ var router = express.Router();
 var firstEndpoint = new gatherEndpoints_1.GatherEndpoints(router);
 // test route
 router.get('/', function (req, res) {
-    res.json({ message: 'welcome' });
+    console.log(req);
+    res.json({ message: 'welcome to the get request' });
 });
 // prefixed all routes with /api
 app.use('/api', router);

@@ -23,9 +23,11 @@ const router = express.Router();
 var firstEndpoint = new GatherEndpoints(router);
 
 // test route
-router.get('/', function (req, res) {
-    res.json({message: 'welcome'});
+router.get('/', function (req: express.Request, res: express.Response) {
+    console.log(req);
+    res.json({message: 'welcome to the get request'});
 });
+
 
 // prefixed all routes with /api
 app.use('/api', router);
