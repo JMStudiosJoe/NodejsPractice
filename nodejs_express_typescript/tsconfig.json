@@ -5,6 +5,9 @@
         "noImplicitAny": false,
         "sourceMap": false
     },
+    "declaration": true,
+    "noExternalResolve": true,
+    "allowSyntheticDefaultImports": true,
     "exclude": [
         "node_modules"
     ]
