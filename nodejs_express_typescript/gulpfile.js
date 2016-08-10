@@ -39,7 +39,7 @@ gulp.task("installTypings",function(){
 
 gulp.task("build-ts", function() {
     var code = gulp.src('src/**/*.ts')
-        .pipe(gulpTsc(gulpTypings()));
+        .pipe(gulpTsc());
 
 });
 
