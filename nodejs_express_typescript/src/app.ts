@@ -12,8 +12,6 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-
-
 const port:number = 8080;
 const router = express.Router();
 
